@@ -6,11 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
-crate-type=["cdylib"]
+name="calc_lib"
+path="src/lib.rs"
 
-[dependencies]
-wasm-bindgen = "0.2"
-
-[package.metadata.wasm-pack]
-out-dir = "./www/src/pkg"
-
+[[bin]]
+name="calc_repl"
+path="src/main.rs"
